@@ -3,7 +3,6 @@ import Spinner from "./Spinner";
 
 function Monedas({ monedas, cargando }) {
   const tiposMonedas = ["Dolar", "Euro", "Pesos Mexicanos"];
-  console.log(cargando);
   if (!monedas) return null;
   return (
     <>

@@ -1,9 +1,7 @@
 import { useState, useEffect } from "react";
 import Form from "./components/Form";
 import Monedas from "./components/Monedas";
-import Spinner from "./components/Spinner";
-// import logo from './logo.svg'
-// import './App.css'
+import Noticias from "./components/Noticias";
 
 function App() {
   const [moneda, setMoneda] = useState("USD,EUR,MXN");
@@ -30,7 +28,6 @@ function App() {
     };
     getCripto();
   }, [moneda, cripto]);
-  console.log(cargando);
 
   let component = monedas ? (
     <Monedas monedas={monedas} cargando={cargando} />
@@ -56,6 +53,10 @@ function App() {
         <div className="grid md:grid-cols-7 sm:grid-cols-8 mt-6">
           {component}
         </div>
+        <h3 className="font-bold text-[2.5rem] text-blue-600 text-center">
+          Ultimas Noticias
+        </h3>
+        <Noticias />
       </div>
     </>
   );
